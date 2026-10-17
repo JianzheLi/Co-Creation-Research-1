@@ -25,14 +25,18 @@ python -c "import torch; print('torch', torch.__version__, 'CUDA available:', to
 
 如果有 NVIDIA GPU，请安装与本机驱动匹配的 CUDA 版 PyTorch，并确认 `torch.cuda.is_available()` 为 `True`。配置中的 `device: cuda` 会要求可用 GPU；没有 GPU 时可将所用 YAML 中的 `device` 改为 `cpu`，完整实验会明显变慢。
 
-当前主实验从头训练条件路径并执行完整流程；小型 smoke 配置用于快速检查流水线：
+当前主实验从头训练条件路径并执行完整流程；小型 smoke 配置用于快速检查流水线。若在仓库根目录运行，`--run-dir` 使用 `Results/...`；若先进入 `Code/` 运行，同一个输出位置应写成 `../Results/...`：
 
 ```powershell
+# 从仓库根目录运行
+python Code/scripts/run_experiment.py --config Code/configs/smoke_verified.yaml --run-dir Results/smoke_verified
+
+# 或从 Code/ 目录运行
+Set-Location Code
 python scripts/run_experiment.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
-python scripts/run_experiment.py --config configs/smoke_verified.yaml --run-dir ../Results/smoke_verified
 ```
 
-所有数据集及来源见 [`Code/data/README.md`](Code/data/README.md)。实验 2 的 CITE、EB 和 Weinreb 数据已放在 `Code/data/`。训练脚本将运行目录写入仓库根目录的 `Results/`（从 `Code/` 运行时传 `--run-dir ../Results/<实验名>`）；评估脚本读取相应运行目录，因此应先完成对应训练，再运行评估。`Results/` 已加入 `.gitignore`，不会随代码和数据提交。
+所有数据集及来源见 [`Code/data/README.md`](Code/data/README.md)。实验 2 的 CITE、EB 和 Weinreb 数据已放在 `Code/data/`。rollout 评估脚本会自动创建 `--run-dir`，并将连续轨迹 `generated.npz`、指标和报告写入该运行目录。因此从仓库根目录传 `Results/<实验名>`，或从 `Code/` 传 `../Results/<实验名>`，都会在仓库根目录生成 `Results/`。评估脚本读取对应运行目录，因此应先完成训练，再运行评估。`Results/` 已加入 `.gitignore`，不会随代码和数据提交。
 
 ## WFR-FM 启发式对照
 
