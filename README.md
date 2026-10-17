@@ -1,12 +1,25 @@
-# DeepRUOT Matching 实验实现
+# Simulation-Free DeepRUOT
 
-本工程实现 `DeepRUOT实验实现说明.md` 中的流水线：条件高斯路径预训练 → 冻结路径 → 双 Coupling → 统一 Flow / Growth / Score Matching → 固定带权粒子的连续 SDE 生成 → POT 评估。
+本仓库研究如何从离散时刻的观测分布求解带扩散和质量变化的随机最优控制问题。给定端点分布 \(\rho_0,\rho_1\)，控制位置漂移 \(U_t(x)\) 和增长率 \(G_t(x)\)，等价地令 \(dX_t=U_t(X_t)dt+\sigma dB_t\)、\(d\log w_t=G_t(X_t)dt\)，求解
 
-2026-10-13 的当前选择：主方法继续使用 `renormalized_surrogate`，即删除三项后验修正的近似目标，不宣称其为原 RUOT Action 的上界。最新同架构原方法配置为 `configs/{gene,mouse,emt}_original_64x3_400x6_a10_s025.yaml`；路径仍保留均值、质量、方差三个网络。所有 Bound 分支、已完成实验和备份保留，未完成的扩散平方矩训练已按用户决定停止。`scripts/probe_coupling_neighborhood.py` 仅在冻结路径后做可行 Coupling 扰动诊断，使用真实离散后验修正，不修改主训练流程。
+\[
+\min_{\rho,U,G}\int_0^1\!\int \rho_t(x)\left(\frac12\lVert U_t(x)\rVert^2+\frac{\alpha}{2}G_t(x)^2\right)\,dx\,dt,
+\quad \partial_t\rho=-\nabla\!\cdot(\rho U)+\frac{\sigma^2}{2}\Delta\rho+G\rho,
+\quad \rho_{t=0}=\rho_0,\;\rho_{t=1}=\rho_1.
+\]
 
-使用 **ψ(g)=g²/2、σ=0.25**；`growth_penalty` 支持有限正值 α，历史基线为 10，新增对照为 2。当前轴对称条件路径网络只输入时间、距离的固定尺度表示和对数质量比；反馈网络只输入全局时间和位置。这里实验的是删除群体修正后的重整化近似目标，并受到高斯和网络参数化限制，不声称精确求解原始连续 RUOT。
+目标是构造 Simulation-Free 求解流程：学习端点条件路径，计算成对代价并求解 Coupling，再用 Flow Matching 拟合反馈控制，最后通过带权粒子 SDE rollout 评估。完整目标中难以计算的三项修正分别涉及后验对数项、漂移残差的后验均值和生长率的后验均值；它们使目标难以写成独立的成对代价。实验主线暂时删去这三项，优化可分解的重整化代理目标。因此，当前方法是原 RUOT 的近似，尚未证明删项不改变最优解，也不把代理目标称作 RUOT Action 的上界。
 
-simulation gene 的 α=2 对照配置为 `configs/gene_distance_hermite_primal_alpha2.yaml` 和 `configs/gene_wfr_bridge_alpha2.yaml`。RUOT 从头预训练 3000 个更新步，每步 2048 个条件、每条件 8 个时间；直接查询路径构建共享 Hermite 表，无蒸馏，投影梯度驻点阈值为 1e-3。WFR 使用同一 α 对应的静态代价、解析均值和质量以及布朗桥方差。两边均使用完整 Coupling 矩阵、相同的 tanh 反馈网络和 30000 步 Matching。`scripts/diagnose_mouse_path_difference.py --run-dir <RUOT目录>` 支持任意已有轴对称运行，输出同条件路径曲线，并用解析公式核验内层控制带来的代价差。
+## 当前实验采用的默认路线
+
+- 取 \(\psi(g)=g^2/2\)；\(\alpha\)、\(\sigma\) 和训练预算由各实验 YAML 明确设置。
+- 条件路径采用轴对称高斯参数化。三个路径网络分别拟合均值、质量和沿路径/垂直路径的方差，输入时间、端点距离和质量比；Matching 从完整条件高斯分布采样。
+- 不蒸馏成对代价网络。冻结路径后直接计算距离—质量比网格上的代价及所需导数，使用距离方向线性插值、质量比方向分段三次 Hermite 插值查询代价表。
+- Coupling 默认使用投影镜像下降（Projected Mirror Descent）求两张 Coupling；全矩阵或按块求解由具体数据集配置决定。
+- 当前端点正则化 Matching 配置使用四个相互独立的网络，分别拟合有限速度、奇异速度、生长和 Score；推理时按公式还原完整场。网络宽度、层数、激活和步数以所用 YAML 为准。
+- 最终从初始时刻进行连续带权粒子 SDE rollout，并在仓库根目录 `Results/` 保存轨迹和评测结果。
+
+上述是当前实验默认路线，不代表其他配置或研究分支也采用相同设置。三个后验修正项的处理仍是主要理论问题；相关推导和实验候选见 `Doc/`，不要据此把当前代理目标解释成已证明的原问题上界。
 
 ## 环境与运行
 
@@ -25,7 +38,7 @@ python -c "import torch; print('torch', torch.__version__, 'CUDA available:', to
 
 如果有 NVIDIA GPU，请安装与本机驱动匹配的 CUDA 版 PyTorch，并确认 `torch.cuda.is_available()` 为 `True`。配置中的 `device: cuda` 会要求可用 GPU；没有 GPU 时可将所用 YAML 中的 `device` 改为 `cpu`，完整实验会明显变慢。
 
-当前主实验从头训练条件路径并执行完整流程；小型 smoke 配置用于快速检查流水线。若在仓库根目录运行，`--run-dir` 使用 `Results/...`；若先进入 `Code/` 运行，同一个输出位置应写成 `../Results/...`：
+小型 smoke 配置用于快速检查流水线；完整实验请使用对应数据集的实验 YAML。若在仓库根目录运行，`--run-dir` 使用 `Results/...`；若先进入 `Code/` 运行，同一个输出位置应写成 `../Results/...`：
 
 ```powershell
 # 从仓库根目录运行
@@ -33,10 +46,52 @@ python Code/scripts/run_experiment.py --config Code/configs/smoke_verified.yaml 
 
 # 或从 Code/ 目录运行
 Set-Location Code
-python scripts/run_experiment.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
+python scripts/run_experiment.py --config configs/experiment1_gene_alpha2_sigma0p25_ruot.yaml --run-dir ../Results/experiment1_gene_alpha2_sigma0p25_ruot
 ```
 
 所有数据集及来源见 [`Code/data/README.md`](Code/data/README.md)。实验 2 的 CITE、EB 和 Weinreb 数据已放在 `Code/data/`。rollout 评估脚本会自动创建 `--run-dir`，并将连续轨迹 `generated.npz`、指标和报告写入该运行目录。因此从仓库根目录传 `Results/<实验名>`，或从 `Code/` 传 `../Results/<实验名>`，都会在仓库根目录生成 `Results/`。评估脚本读取对应运行目录，因此应先完成训练，再运行评估。`Results/` 已加入 `.gitignore`，不会随代码和数据提交。
+
+## 协作开发（Fork + Pull Request）
+
+协作者在自己的 Fork 中开发，通过 Pull Request（PR）提交改动；维护者审查后再合并到主仓库的 `main`。协作者不需要主仓库写权限，也不要直接在 `main` 上开发。
+
+1. 在 GitHub 打开主仓库，点击 **Fork**，把项目复制到自己的账号。
+2. 克隆自己的 Fork，并添加主仓库为 `upstream`：
+
+   ```powershell
+   git clone https://github.com/<GitHub用户名>/Co-Creation-Research-1.git
+   cd Co-Creation-Research-1
+   git remote add upstream https://github.com/ZerooVector/Co-Creation-Research-1.git
+   git remote -v
+   ```
+
+3. 开始新工作前同步主仓库：
+
+   ```powershell
+   git switch main
+   git fetch upstream
+   git merge --ff-only upstream/main
+   git push origin main
+   ```
+
+4. 为每项工作创建独立分支：
+
+   ```powershell
+   git switch -c research/<简短主题>
+   ```
+
+5. 按本 README 配置环境、运行相关测试和实验。数据在 `Code/data/`；运行结果写入根目录 `Results/`，该目录已被忽略，不要提交模型、日志或结果文件。
+6. 只暂存本次修改的代码、配置和文档，检查状态后提交并推送：
+
+   ```powershell
+   git add <本次修改的文件>
+   git status
+   git commit -m "描述本次改动"
+   git push -u origin research/<简短主题>
+   ```
+
+7. 在 GitHub 创建 PR，目标仓库为 `ZerooVector/Co-Creation-Research-1`，目标分支为 `main`。说明研究目的、改动、复现命令和测试结果；实验结果生成后写明本地 `Results/` 路径。若审查后需要修改，继续推送同一分支，PR 会自动更新。
+8. PR 合并后，用第 3 步的命令同步主仓库更新。维护者可为 `main` 设置 PR 审查和分支保护规则，详见 [GitHub 分支保护文档](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)。
 
 ## WFR-FM 启发式对照
 
@@ -53,11 +108,11 @@ python scripts/run_wfr_heuristic.py --config configs/gene_wfr_bridge.yaml --run-
 
 Windows 下 NumPy/MKL 与 PyTorch 各自携带的 Intel OpenMP DLL 曾发生冲突。工程在数值库导入前设置 `MKL_THREADING_LAYER=SEQUENTIAL`，避免加载第二套 OpenMP；独立测试和性能测量也应按上方命令设置该变量。不要设置 `KMP_DUPLICATE_LIB_OK`。GPU 训练仍正常工作，PyTorch CPU 线程数由配置决定。
 
-## 配置的区别
+## Simulation-Gene 历史配置记录
 
 | 配置 | 观测点 | 路径网络 | 路径预训练 | Coupling | Matching |
 |---|---|---|---|---|---|
-| **`gene_steps_gpu.yaml`（当前主实验）** | 全部 3031 点 | 32 宽、2 层 | 从头训练 4000 步，每条件 8 个时间 | 4 个全矩阵、GPU、最多 10000 轮 | 30000 步、余弦学习率、无验证集 |
+| `gene_steps_gpu.yaml`（早期全矩阵配置） | 全部 3031 点 | 32 宽、2 层 | 从头训练 4000 步，每条件 8 个时间 | 4 个全矩阵、GPU、最多 10000 轮 | 30000 步、余弦学习率、无验证集 |
 | `gene_full_gpu.yaml`（已停止的历史运行） | 全部 3031 点 | 32 宽、2 层 | 复用已完成的 10 轮覆盖训练 | 全矩阵、GPU，流程未完成 | 未完成实验 |
 | `gene.yaml` | 全部 3031 点 | 128 宽、3 层 | 10 轮 | 全连接、最多 1000 轮 | 50000 步 |
 | `gene_practical.yaml`（已停止的分块诊断） | 全部 3031 点 | 32 宽、2 层 | 已完成 10 轮 | 约 64 点随机分块 | 原计划 10000 步，未完成实验 |
@@ -66,13 +121,13 @@ Windows 下 NumPy/MKL 与 PyTorch 各自携带的 Intel OpenMP DLL 曾发生冲�
 
 `smoke.yaml` 的最初实验保留为失败诊断；其 Coupling 在 1000 轮时未满足 `1e-6` 容差。增加迭代上限后的工程检查保存在独立目录，避免改变已有实验的配置。
 
-当前主实验的四个 Coupling 矩阵尺寸为 `400×442`、`442×530`、`530×690`、`690×969`，每个相邻区间使用全部源点和目标点。收敛阈值 `marginal_tolerance=0.002` 表示相对 L1 边缘残差，对应相对 Total Variation `0.001`：`relative_TV = sum(abs(residual)) / (2 * sum(target_mass))`。P 的行边缘和 Q 的列边缘均须满足该要求。
+该配置的四个 Coupling 矩阵尺寸为 `400×442`、`442×530`、`530×690`、`690×969`，每个相邻区间使用全部源点和目标点。收敛阈值 `marginal_tolerance=0.002` 表示相对 L1 边缘残差，对应相对 Total Variation `0.001`：`relative_TV = sum(abs(residual)) / (2 * sum(target_mass))`。P 的行边缘和 Q 的列边缘均须满足该要求。
 
 当前条件路径使用 `pair.training_mode: steps`，更新 **4000 步**。每步从全部 **1445370 个**相邻候选位移中均匀抽取 **2048 个**条件，独立采样 `r ~ Uniform(0.1,10)` 后计算 `log(r)`，每个条件均匀采样 **8 个**开区间时间。位移通过 `(k,i,j)` 索引按需构造；这不要求每轮无遗漏遍历全部位移，日志分别记录累计条件访问数与实际见到的唯一候选对数。`pair.training_steps` 控制更新次数，`pair.times_per_condition` 控制时间采样量。
 
 Matching 使用 **30000 步**，学习率按余弦计划从 `1e-3` 降至 `1e-4`。设置 `matching.validation_every=0`，不构造 Matching 验证集，通过最终生成效果和评估指标判断结果。Flow 恢复使用原加权误差 `||sqrt(t(1-t)) V - target_scaled||²`，其加权标签在端点附近保持有限。
 
-历史 `gene_practical` 已完成 10 轮全位移覆盖预训练，耗时约 **290.58 秒**：前三轮质量比分别固定为 0.1、1、10，随后对数均匀采样，每条件 4 个时间。`gene_full_gpu` 曾复用该 checkpoint，但两个历史运行均在完整流程完成前停止。它们保留作诊断；本轮 `gene_steps_gpu` 重新训练，使用本轮实际预训练耗时计算端到端时间。
+历史 `gene_practical` 已完成 10 轮全位移覆盖预训练，耗时约 **290.58 秒**：前三轮质量比分别固定为 0.1、1、10，随后对数均匀采样，每条件 4 个时间。`gene_full_gpu` 曾复用该 checkpoint，但两个历史运行均在完整流程完成前停止。它们保留作诊断；`gene_steps_gpu` 使用步数模式重新训练。
 
 ## 分阶段运行与恢复
 
