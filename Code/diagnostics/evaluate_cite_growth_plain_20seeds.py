@@ -1,7 +1,7 @@
 
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # DeepRUOT/Code: src/
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # Code: src/
 import json,math,sys,time
 from pathlib import Path
 import numpy as np, torch

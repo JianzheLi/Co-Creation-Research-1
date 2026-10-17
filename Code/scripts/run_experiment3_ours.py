@@ -26,16 +26,16 @@ from scipy.spatial.distance import cdist
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-DATA_ROOT = ROOT.parent.parent / "Baselines" / "WFR-FM-main1" / "data"
+DATA_ROOT = ROOT / "data"
 DATA_FILES = {
     "cite": "cite_pca50.csv",
     "eb_noscale": "eb_noscale.csv",
     "weinreb": "Weinreb_alltime.csv",
 }
 CONFIGS = {
-    "cite": ROOT / "../Results" / "experiment2" / "cite_bounded_allfield_outputnorm_warmstart_leakyrelu_w512x8_growth4_lr3e3to1e5_30000_seed42" / "config.yaml",
-    "eb_noscale": ROOT / "../Results" / "experiment2" / "eb_noscale_leakyrelu_allfield_outputnorm_warmstart_w512x8_a1225_sigma05_blocks8_fm30000_seed42" / "config.yaml",
-    "weinreb": ROOT / "../Results" / "experiment2" / "weinreb_silu_allfield_outputnorm_warmstart_w512x8_a225_sigma05_blocks16_fm30000_seed42" / "config.yaml",
+    "cite": ROOT / "configs" / "experiment3_cite_base.yaml",
+    "eb_noscale": ROOT / "configs" / "experiment3_eb_noscale_base.yaml",
+    "weinreb": ROOT / "configs" / "experiment3_weinreb_base.yaml",
 }
 
 

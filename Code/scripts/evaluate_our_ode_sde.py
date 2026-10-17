@@ -16,9 +16,8 @@ import torch
 from scipy.spatial.distance import cdist
 from scipy.special import logsumexp
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # DeepRUOT/Code: src/
-sys.path.insert(0, str(Path(__file__).resolve().parents[3]))  # workspace root: Baselines/
-from Baselines.experiment2.evaluate import _emd2_with_retry
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # Code: src/
+from src.evaluation_utils import emd2_with_retry as _emd2_with_retry
 from src.experiment import make_feedback
 from src.matching import validate_feedback_architecture
 from src.runtime import configure, file_hash, load_config, snapshots_for

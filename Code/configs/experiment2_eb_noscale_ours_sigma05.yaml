@@ -6,7 +6,7 @@ seed: 42
 growth_penalty: 1225.0
 model_sigma: 0.5
 dataset: eb_noscale
-data_path: ../../Baselines/WFR-FM-main1/data/eb_noscale.csv
+data_path: data/eb_noscale.csv
 dimension: 100
 model_times: [0, 1, 2, 3, 4]
 max_observed_points: null

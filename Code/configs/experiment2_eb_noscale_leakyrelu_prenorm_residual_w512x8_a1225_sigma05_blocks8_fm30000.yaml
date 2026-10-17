@@ -2,7 +2,7 @@ seed: 42
 device: cuda
 cpu_threads: 4
 dataset: eb_noscale
-data_path: ../../Baselines/WFR-FM-main1/data/eb_noscale.csv
+data_path: data/eb_noscale.csv
 dimension: 100
 model_times:
 - 0

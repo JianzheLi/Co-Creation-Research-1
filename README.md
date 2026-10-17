@@ -10,19 +10,29 @@ simulation gene 的 α=2 对照配置为 `configs/gene_distance_hermite_primal_a
 
 ## 环境与运行
 
-在 `DeepRUOT/Code` 目录运行。用户指定的 `data_science` 环境已经包含依赖和支持 RTX 5080 的 CUDA PyTorch。更新后的主实验使用 `configs/gene_steps_gpu.yaml`，建议输出到 `../Results/gene_steps_gpu_4000_seed42`，从头训练条件路径并执行完整流程。路径、代价建表、完整 Coupling 双对偶求解、Matching 和生成的主要张量驻留 GPU；最终 POT 精确 EMD 在 CPU 上执行。
+仓库根目录包含 `Code/`、`Doc/` 和 `Manuscript/`。推荐使用 Python 3.11；从仓库根目录进入 `Code/` 后安装依赖并运行。数据 CSV 已包含在仓库中，普通训练不需要先下载 Baselines 或 WFR-FM 仓库。
 
 ```powershell
+conda create -n ruotmatching python=3.11 -y
+conda activate ruotmatching
+python -m pip install --upgrade pip
+Set-Location Code
+python -m pip install -r requirements.txt
 $env:MKL_THREADING_LAYER = 'SEQUENTIAL'
-conda run --no-capture-output -n data_science python -m pytest -q
-
-# 当前主实验：条件路径重新训练 2000 步，4 个全矩阵 Coupling，Matching 30000 步。
-# 新目录从头训练；相同配置、相同目录再次执行则恢复 checkpoint。
-conda run --no-capture-output -n data_science python scripts/run_experiment.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
-
-# 小规模工程检查；300 步 Matching 仅用于检查流水线。
-conda run --no-capture-output -n data_science python scripts/run_experiment.py --config configs/smoke_verified.yaml --run-dir ../Results/smoke_verified
+python -m pytest -q
+python -c "import torch; print('torch', torch.__version__, 'CUDA available:', torch.cuda.is_available())"
 ```
+
+如果有 NVIDIA GPU，请安装与本机驱动匹配的 CUDA 版 PyTorch，并确认 `torch.cuda.is_available()` 为 `True`。配置中的 `device: cuda` 会要求可用 GPU；没有 GPU 时可将所用 YAML 中的 `device` 改为 `cpu`，完整实验会明显变慢。
+
+当前主实验从头训练条件路径并执行完整流程；小型 smoke 配置用于快速检查流水线：
+
+```powershell
+python scripts/run_experiment.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
+python scripts/run_experiment.py --config configs/smoke_verified.yaml --run-dir ../Results/smoke_verified
+```
+
+所有数据集及来源见 [`Code/data/README.md`](Code/data/README.md)。实验 2 的 CITE、EB 和 Weinreb 数据已放在 `Code/data/`。训练脚本将运行目录写入仓库根目录的 `Results/`（从 `Code/` 运行时传 `--run-dir ../Results/<实验名>`）；评估脚本读取相应运行目录，因此应先完成对应训练，再运行评估。`Results/` 已加入 `.gitignore`，不会随代码和数据提交。
 
 ## WFR-FM 启发式对照
 
@@ -32,7 +42,7 @@ conda run --no-capture-output -n data_science python scripts/run_experiment.py -
 
 ```powershell
 $env:MKL_THREADING_LAYER = 'SEQUENTIAL'
-conda run --no-capture-output -n data_science python scripts/run_wfr_heuristic.py --config configs/gene_wfr_bridge.yaml --run-dir ../Results/gene_wfr_bridge_alpha10_sigma025_seed42
+python scripts/run_wfr_heuristic.py --config configs/gene_wfr_bridge.yaml --run-dir ../Results/gene_wfr_bridge_alpha10_sigma025_seed42
 ```
 
 运行会保存 WFR coupling、反馈模型、粒子评测、与 RUOT 指标对照表和训练后作用量。
@@ -64,18 +74,18 @@ Matching 使用 **30000 步**，学习率按余弦计划从 `1e-3` 降至 `1e-4`
 
 ```powershell
 $env:MKL_THREADING_LAYER = 'SEQUENTIAL'
-conda run --no-capture-output -n data_science python scripts/train_pairs.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
-conda run --no-capture-output -n data_science python scripts/solve_couplings.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
-conda run --no-capture-output -n data_science python scripts/train_matching.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
-conda run --no-capture-output -n data_science python scripts/generate_and_evaluate.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
-conda run --no-capture-output -n data_science python scripts/compute_action.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
+python scripts/train_pairs.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
+python scripts/solve_couplings.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
+python scripts/train_matching.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
+python scripts/generate_and_evaluate.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
+python scripts/compute_action.py --config configs/gene_steps_gpu.yaml --run-dir ../Results/gene_steps_gpu_4000_seed42
 ```
 
 复用路径的辅助工具仍保留，适用于另建诊断实验；当前从头训练的主实验不执行该步骤。以下历史 coverage 示例要求目标目录**尚不存在**，工具核验路径阶段配置及来源，保留原预训练耗时和 checkpoint 哈希；它不复用旧分块 Coupling。复用实验的端到端计时仍包含来源预训练耗时。
 
 ```powershell
-conda run --no-capture-output -n data_science python scripts/reuse_pair_checkpoint.py --source ../Results/gene_practical_seed42 --config configs/gene_full_gpu.yaml --run-dir ../Results/gene_full_gpu_reuse_seed42
-conda run --no-capture-output -n data_science python scripts/run_experiment.py --config configs/gene_full_gpu.yaml --run-dir ../Results/gene_full_gpu_reuse_seed42
+python scripts/reuse_pair_checkpoint.py --source ../Results/gene_practical_seed42 --config configs/gene_full_gpu.yaml --run-dir ../Results/gene_full_gpu_reuse_seed42
+python scripts/run_experiment.py --config configs/gene_full_gpu.yaml --run-dir ../Results/gene_full_gpu_reuse_seed42
 ```
 
 当前 steps 模式的路径每 500 步及最终保存 checkpoint；Matching 每 1000 步及最终保存。重新执行同一配置、同一输出目录，会恢复最近的 checkpoint，包括优化器和随机数状态。历史 coverage 模式每个完整覆盖轮次保存，中断时从该轮开头重跑。已有输出目录拒绝接受不同的配置，参数变更应使用新目录。
@@ -91,7 +101,7 @@ Coupling 必须成功收敛才能训练反馈网络；反馈 checkpoint 必须�
 新配置 `configs/gene_distance_distilled.yaml` 在模拟基因数据上启用完整流程：
 
 ```powershell
-conda run -n data_science python scripts/run_experiment.py --config configs/gene_distance_distilled.yaml --run-dir ../Results/gene_ruot_distance_distilled_seed42
+python scripts/run_experiment.py --config configs/gene_distance_distilled.yaml --run-dir ../Results/gene_ruot_distance_distilled_seed42
 ```
 
 `pair.parameterization: axial_distance` 使三个路径网络只输入 `(t, d/delta_scale, log(r))`。
