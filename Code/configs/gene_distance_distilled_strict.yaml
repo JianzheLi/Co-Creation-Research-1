@@ -1,0 +1,3 @@
+extends: gene_distance_distilled.yaml
+distillation:
+  loss_reduction: mean_plus_max

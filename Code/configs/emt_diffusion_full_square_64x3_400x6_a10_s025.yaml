@@ -1,0 +1,16 @@
+extends: emt_distance_hermite_primal.yaml
+device: cuda
+growth_penalty: 10.0
+model_sigma: 0.25
+pair:
+  hidden_width: 64
+  hidden_layers: 3
+  training_steps: 3000
+  cost_objective: diffusion_full_square_upper_bound
+matching:
+  hidden_width: 400
+  hidden_layers: 6
+  feedback_activation: silu
+  last_hidden_activation: tanh
+coupling:
+  reference_weights: source_target_product

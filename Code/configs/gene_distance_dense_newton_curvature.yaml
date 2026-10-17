@@ -1,0 +1,8 @@
+extends: gene_distance_distilled_dense.yaml
+coupling:
+  algorithm: row_normalization_column_root
+  root_method: newton
+  condition_chunk: 32768
+distillation:
+  curvature_weight: 1.0
+  teacher_condition_chunk: 4096

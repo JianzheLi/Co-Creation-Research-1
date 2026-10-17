@@ -1,0 +1,6 @@
+extends: gene_distance_distilled_dense.yaml
+coupling:
+  algorithm: projected_mirror_descent
+  root_method: null
+  stationarity_tolerance: 0.001
+  condition_chunk: 32768

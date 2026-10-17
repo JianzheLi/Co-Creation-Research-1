@@ -1,0 +1,5 @@
+# 实验 2：分布匹配
+
+本目录记录 Cite、EB-Noscale、Weinreb 真实数据集上各方法的重建汇总。`all_timepoint_metrics.csv` 保留逐时间点指标，`method_dataset_summary.csv` 汇总各方法的 W1 和质量误差；`Figures/` 提供跨数据集的 W1 图。诊断说明记录 LayerNorm、匹配稳定性和输出范数相关检查。
+
+完整模型、各时间点训练目录与评测细节保存在 `../../Results/experiment2/`。这些完整运行产物不纳入提交；更新实验时应保留独立运行目录并刷新本目录的轻量汇总。

@@ -1,0 +1,4 @@
+extends: gene_distance_distilled_strict.yaml
+distillation:
+  sampling: continuous
+  max_error_weight: 1.0

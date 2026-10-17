@@ -1,0 +1,15 @@
+# Current experiment: all official observations, all pairs, full matrix coupling.
+extends: gene_practical.yaml
+model_sigma: 0.25
+coupling:
+  mode: full
+  backend: torch
+  marginal_tolerance: 0.002
+  marginal_tolerance_type: relative_l1
+  target_relative_tv: 0.001
+  condition_chunk: 4096
+matching:
+  steps: 30000
+  lr_schedule: cosine
+  min_learning_rate: 0.0001
+  validation_every: 0

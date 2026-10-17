@@ -1,0 +1,11 @@
+extends: gene_full_gpu.yaml
+pair:
+  training_mode: steps
+  training_steps: 4000
+  ratio_sampling: uniform
+  times_per_condition: 8
+  checkpoint_every_steps: 500
+  log_every_steps: 100
+  validation_every_steps: 500
+matching:
+  validation_every: 0

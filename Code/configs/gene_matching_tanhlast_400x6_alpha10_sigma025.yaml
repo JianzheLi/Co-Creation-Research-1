@@ -1,0 +1,7 @@
+extends: gene_distance_hermite_primal.yaml
+device: cuda
+matching:
+  hidden_width: 400
+  hidden_layers: 6
+  feedback_activation: silu
+  last_hidden_activation: tanh

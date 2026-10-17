@@ -1,0 +1,28 @@
+# Local experiment outputs
+/Results/
+/output/
+/outputs/
+/workdirs/
+/checkpoints/
+
+# Python caches and temporary files
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.tmp
+*.log
+
+# Generated diagnostic artifacts
+/Code/diagnostics/*.pt
+/Code/diagnostics/*.pth
+/Code/diagnostics/*.ckpt
+/Code/diagnostics/*.npz
+/Code/diagnostics/*.json
+/Code/diagnostics/pdfs/
+
+# Common experiment tooling
+**/.ipynb_checkpoints/
+**/wandb/
+**/lightning_logs/
+**/evaluation_all_initial_points/
+**/checkpoints/

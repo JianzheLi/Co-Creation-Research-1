@@ -1,0 +1,5 @@
+extends: gene_logmoment_bound.yaml
+pair:
+  cost_objective: tight_logmoment_upper_bound
+coupling:
+  condition_chunk: 512

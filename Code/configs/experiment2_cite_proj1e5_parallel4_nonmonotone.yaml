@@ -1,0 +1,8 @@
+# Experiment 2 only: use the tighter projection tolerance with the bounded
+# nonmonotone fallback and a global four-worker block queue.
+extends: experiment2_cite_parallel3_tol3e3_proj1e5.yaml
+coupling:
+  parallel_workers: 4
+  global_block_queue: true
+  allow_nonmonotone_fallback: true
+  nonmonotone_min_step_fraction: 0.000244140625

@@ -1,0 +1,5 @@
+# Isolates the endpoint-aware Matching parameterization on the existing
+# Simulation Gene sigma=0.5 pair path and coupling settings.
+extends: experiment1_gene_alpha2_sigma0p5_ruot.yaml
+matching:
+  field_parameterization: endpoint_regularized

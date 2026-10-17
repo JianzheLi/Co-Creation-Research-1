@@ -1,0 +1,5 @@
+extends: emt_distance_hermite_primal_alpha2_sigma1.yaml
+pair:
+  hidden_width: 64
+  hidden_layers: 3
+  cost_objective: renormalized_surrogate

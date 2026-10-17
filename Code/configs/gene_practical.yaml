@@ -1,0 +1,13 @@
+# Full official observations and full displacement coverage; smaller initial MLP.
+extends: gene.yaml
+pair:
+  hidden_width: 32
+  hidden_layers: 2
+  conditions_per_batch: 2048
+coupling:
+  mode: minibatch
+  minibatch_size_hint: 64
+  # The first engineering run at 1000 iterations failed the marginal tolerance.
+  max_outer_iterations: 10000
+matching:
+  steps: 10000

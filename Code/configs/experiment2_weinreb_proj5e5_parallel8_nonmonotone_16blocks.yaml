@@ -1,0 +1,4 @@
+extends: experiment2_weinreb_proj5e5_parallel4_nonmonotone.yaml
+coupling:
+  minibatch_blocks: 16
+  parallel_workers: 8

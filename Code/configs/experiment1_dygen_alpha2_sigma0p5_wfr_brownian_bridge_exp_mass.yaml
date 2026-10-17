@@ -1,0 +1,123 @@
+seed: 42
+device: cuda
+cpu_threads: 4
+dataset: wfr_fm_dygen
+data_path: data/wfr_fm_dygen.csv
+dimension: 5
+model_times:
+- 0
+- 1
+- 2
+- 3
+- 4
+model_sigma: 0.5
+growth_penalty: 2.0
+growth_penalty_type: quadratic_half
+control_mode: quadratic_minimal
+max_observed_points: null
+pair:
+  ratio_min: 0.1
+  ratio_max: 10.0
+  coverage_epochs: 10
+  conditions_per_batch: 2048
+  times_per_condition: 8
+  hidden_width: 64
+  hidden_layers: 3
+  correction_bounds:
+  - 4.0
+  - 4.0
+  - 4.0
+  delta_scale: 1.0
+  learning_rate: 0.001
+  dtype: float64
+  quadrature_nodes: 32
+  max_quadrature_nodes: 128
+  query_atol: 0.0001
+  query_rtol: 0.0001
+  validation_conditions: 128
+  validation_every: 1
+  training_mode: analytic_brownian_bridge_exp_mass
+  training_steps: 0
+  ratio_sampling: uniform
+  checkpoint_every_steps: 500
+  log_every_steps: 100
+  validation_every_steps: 500
+  parameterization: axial_distance
+  cost_objective: renormalized_surrogate
+coupling:
+  algorithm: projected_mirror_descent
+  entropy_coefficient: sigma_squared
+  reference_weights: ones
+  marginal_tolerance: 0.002
+  root_logmass_tolerance: 1.0e-08
+  max_outer_iterations: 10000
+  max_bisection_iterations: 60
+  mode: full
+  minibatch_size_hint: 64
+  partition_seed: 43
+  ratio_grid_nodes: 257
+  max_ratio_grid_nodes: 1025
+  table_atol: 0.001
+  table_rtol: 0.001
+  curvature_tolerance: 1.0e-05
+  condition_chunk: 4096
+  backend: torch
+  marginal_tolerance_type: relative_l1
+  target_relative_tv: 0.001
+  root_method: null
+  stationarity_tolerance: 0.001
+  cost_evaluation: analytic_wfr
+  distance_grid_nodes: 513
+  max_distance_grid_nodes: 2049
+  partition_order: dataset_default
+  method: wfr_fm_oet
+  max_mm_iterations: 1000
+  mm_stop_tolerance: 1.0e-15
+  max_oet_semicoupling_relative_gap: 0.001
+matching:
+  hidden_width: 400
+  hidden_layers: 6
+  batch_size: 2048
+  learning_rate: 0.001
+  steps: 30000
+  dtype: float32
+  interval_sampling: uniform
+  log_every: 100
+  lr_schedule: cosine
+  min_learning_rate: 0.0001
+  validation_every: 0
+  feedback_activation: silu
+  last_hidden_activation: tanh
+generation:
+  n_particles: 2000
+  steps_per_unit_interval: 200
+  endpoint_guard: 1.0e-05
+  particle_birth_death: false
+  carry_log_weights: true
+  sensitivity_particles: 256
+evaluation:
+  library: POT
+  transport_solver: emd2
+  normalize_for_W1_W2: true
+  report_mass_separately: true
+distillation:
+  enabled: false
+  distance_grid_nodes: 513
+  ratio_grid_nodes: 1025
+  hidden_width: 128
+  hidden_layers: 3
+  training_steps: 20000
+  batch_size: 4096
+  learning_rate: 0.001
+  min_learning_rate: 1.0e-06
+  validation_samples: 2048
+  query_atol: 0.001
+  query_rtol: 0.001
+  loss_reduction: mean_plus_max
+  sampling: grid
+  boundary_samples_per_batch: 768
+  max_error_weight: 1.0
+data_url: https://raw.githubusercontent.com/QiangweiPeng/WFR-FM/main/data/dygen.csv
+data_sha256: 63ce34c38b2ec3d25f3c40a7ffee1dfb06b213563ecc3bfb8b05c393e7409062
+experiment_method: wfr_fm_bridge_exp_mass
+comparison_run: ../Results/experiment1_alpha2_sigma_sweep/dygen/sigma_0p5/ruot_seed42

@@ -1,0 +1,9 @@
+# Experiment 2 only: 16 blocks per interval, an eight-worker global queue,
+# tighter projection tolerance, and the bounded nonmonotone fallback.
+extends: experiment2_weinreb_parallel3_tol3e3_proj1e5.yaml
+coupling:
+  minibatch_blocks: 16
+  parallel_workers: 8
+  global_block_queue: true
+  allow_nonmonotone_fallback: true
+  nonmonotone_min_step_fraction: 0.000244140625

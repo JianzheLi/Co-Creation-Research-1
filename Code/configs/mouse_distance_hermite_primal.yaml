@@ -1,0 +1,11 @@
+extends: gene_distance_hermite_primal.yaml
+dataset: official_deepruot_mouse_hematopoiesis
+data_path: data/mouse_hematopoiesis.csv
+data_url: https://raw.githubusercontent.com/zhenyiizhang/DeepRUOT/main/data/mouse_hematopoiesis.csv
+data_sha256: BE4360CD67E76205501DE63124379BE5C82506748E018197A3FDB4DBB1C7CA2F
+model_times: [0, 1, 2]
+coupling:
+  mode: minibatch
+  minibatch_blocks: 8
+  partition_order: dataset_default
+  stationarity_tolerance: 0.001

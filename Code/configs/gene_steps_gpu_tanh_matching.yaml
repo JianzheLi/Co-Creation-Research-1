@@ -1,0 +1,3 @@
+extends: gene_steps_gpu.yaml
+matching:
+  feedback_activation: tanh

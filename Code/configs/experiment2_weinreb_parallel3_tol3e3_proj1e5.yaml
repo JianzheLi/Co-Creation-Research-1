@@ -1,0 +1,7 @@
+# Experiment 2 only: explicit, independently configurable Coupling tolerances.
+extends: experiment2_weinreb_ours_sigma05.yaml
+coupling:
+  marginal_tolerance: 0.002
+  stationarity_tolerance: 0.003
+  projection_tolerance: 0.00001
+  parallel_workers: 3

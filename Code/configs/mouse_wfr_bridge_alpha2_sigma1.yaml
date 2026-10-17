@@ -1,0 +1,4 @@
+extends: mouse_wfr_bridge_tanh_minibatch.yaml
+model_sigma: 1.0
+growth_penalty: 2.0
+comparison_run: ../Results/mouse_distance_hermite_primal_alpha2_sigma1_seed42

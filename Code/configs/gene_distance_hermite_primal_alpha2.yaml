@@ -1,0 +1,5 @@
+extends: gene_distance_hermite_primal.yaml
+growth_penalty: 2.0
+pair:
+  training_mode: steps
+  training_steps: 3000

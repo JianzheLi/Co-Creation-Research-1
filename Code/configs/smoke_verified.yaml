@@ -1,0 +1,3 @@
+extends: smoke.yaml
+coupling:
+  max_outer_iterations: 10000

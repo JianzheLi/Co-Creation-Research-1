@@ -1,0 +1,4 @@
+# Matching-only trial: independent residual MLPs on the saved sigma=0.5 path/couplings.
+extends: experiment2_eb_noscale_ours_sigma05.yaml
+matching:
+  network_variant: residual

@@ -1,0 +1,10 @@
+extends: gene_distance_dense_primal.yaml
+coupling:
+  cost_evaluation: shared_distance_hermite
+  distance_grid_nodes: 513
+  max_distance_grid_nodes: 2049
+  ratio_grid_nodes: 257
+  max_ratio_grid_nodes: 1025
+  condition_chunk: 4096
+distillation:
+  enabled: false

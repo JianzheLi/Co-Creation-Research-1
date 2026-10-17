@@ -1,0 +1,6 @@
+extends: emt_distance_hermite_primal.yaml
+coupling:
+  reference_weights: source_target_product
+pair:
+  cost_objective: logmoment_upper_bound
+  training_steps: 3000

@@ -1,0 +1,12 @@
+extends: experiment1_emt_alpha2_sigma0p5_ruot.yaml
+experiment_method: wfr_fm_bridge
+comparison_run: ../Results/experiment1_alpha2_sigma_sweep/emt/sigma_0p5/ruot_seed42
+pair:
+  training_mode: analytic_wfr_bridge
+  training_steps: 0
+coupling:
+  method: wfr_fm_oet
+  cost_evaluation: analytic_wfr
+  max_mm_iterations: 1000
+  mm_stop_tolerance: 1.0e-15
+  max_oet_semicoupling_relative_gap: 0.001

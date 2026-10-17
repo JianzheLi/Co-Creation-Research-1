@@ -1,0 +1,6 @@
+# Matching-only trial: independent MLPs with fixed four-band time Fourier encoding.
+extends: experiment2_eb_noscale_ours_sigma05.yaml
+matching:
+  hidden_width: 420
+  hidden_layers: 6
+  network_variant: fourier

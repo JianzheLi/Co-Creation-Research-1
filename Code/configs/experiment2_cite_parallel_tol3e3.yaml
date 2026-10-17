@@ -1,0 +1,4 @@
+extends: experiment2_cite_ours_sigma05.yaml
+coupling:
+  parallel_workers: 2
+  stationarity_tolerance: 0.003

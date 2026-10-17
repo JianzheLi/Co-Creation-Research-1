@@ -1,0 +1,54 @@
+# Proposed RUOT method, matched to Exp. 2 WFR-FM growth scale and sigma=0.5.
+extends: gene_distance_hermite_primal.yaml
+device: cuda
+cpu_threads: 4
+seed: 42
+growth_penalty: 225.0
+model_sigma: 0.5
+dataset: weinreb
+data_path: ../../Baselines/WFR-FM-main1/data/Weinreb_alltime.csv
+dimension: 50
+model_times: [0, 1, 2]
+max_observed_points: null
+pair:
+  parameterization: axial_distance
+  hidden_width: 64
+  hidden_layers: 3
+  training_mode: steps
+  training_steps: 3000
+  conditions_per_batch: 2048
+  times_per_condition: 8
+  ratio_sampling: uniform
+  delta_scale: 16.132638675139972
+  cost_objective: renormalized_surrogate
+coupling:
+  mode: minibatch
+  minibatch_blocks: 8
+  partition_seed: 43
+  partition_order: dataset_default
+  backend: torch
+  algorithm: projected_mirror_descent
+  cost_evaluation: shared_distance_hermite
+  marginal_tolerance: 0.002
+  stationarity_tolerance: 0.001
+  max_outer_iterations: 50000
+  distance_grid_nodes: 513
+  max_distance_grid_nodes: 2049
+  ratio_grid_nodes: 257
+  max_ratio_grid_nodes: 1025
+  condition_chunk: 4096
+  table_atol: 0.01
+matching:
+  steps: 40000
+  hidden_width: 400
+  hidden_layers: 6
+  feedback_activation: silu
+  last_hidden_activation: tanh
+  batch_size: 2048
+  validation_every: 0
+generation:
+  n_particles: 2000
+  steps_per_unit_interval: 200
+  endpoint_guard: 0.00001
+  particle_birth_death: false
+  carry_log_weights: true

@@ -1,0 +1,721 @@
+﻿dataset,dataset_id,sigma,method,seed,Action
+Simulation Gene,gene,0.1,RUOT,1000,1.268030286564799
+Simulation Gene,gene,0.1,RUOT,1001,1.3039670900649167
+Simulation Gene,gene,0.1,RUOT,1002,1.255146130969745
+Simulation Gene,gene,0.1,RUOT,1003,1.2200426087728422
+Simulation Gene,gene,0.1,RUOT,1004,1.3089669923469953
+Simulation Gene,gene,0.1,RUOT,1005,1.2478372634206871
+Simulation Gene,gene,0.1,RUOT,1006,1.2326904965303287
+Simulation Gene,gene,0.1,RUOT,1007,1.2670003526353322
+Simulation Gene,gene,0.1,RUOT,1008,1.3168550219702224
+Simulation Gene,gene,0.1,RUOT,1009,1.2182830952568706
+Simulation Gene,gene,0.1,RUOT,1010,1.2420434263607874
+Simulation Gene,gene,0.1,RUOT,1011,1.2896275907067662
+Simulation Gene,gene,0.1,RUOT,1012,1.271083660521152
+Simulation Gene,gene,0.1,RUOT,1013,1.2614813777100236
+Simulation Gene,gene,0.1,RUOT,1014,1.2750582433664213
+Simulation Gene,gene,0.1,RUOT,1015,1.2416703746894615
+Simulation Gene,gene,0.1,RUOT,1016,1.3049549941963325
+Simulation Gene,gene,0.1,RUOT,1017,1.2940910783888007
+Simulation Gene,gene,0.1,RUOT,1018,1.2575929969541284
+Simulation Gene,gene,0.1,RUOT,1019,1.2754772718664569
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1000,1.2638985758301744
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1001,1.298795312095523
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1002,1.2501509500581505
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1003,1.2163890909872273
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1004,1.3034590668732149
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1005,1.243069351544713
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1006,1.2281824479302412
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1007,1.2622154484881967
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1008,1.3118344193209817
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1009,1.2150867900559599
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1010,1.237033972128165
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1011,1.2848240987980573
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1012,1.2667155389327105
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1013,1.2564613630843005
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1014,1.2703719519970509
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1015,1.2374180689281924
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1016,1.300605843844009
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1017,1.2887738245227585
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1018,1.2524816488723347
+Simulation Gene,gene,0.1,WFR+Brownian bridge,1019,1.2699177708091844
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1000,1.274789054143699
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1001,1.3094658132864583
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1002,1.2606840314478487
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1003,1.226824705126778
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1004,1.313933692940958
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1005,1.253768657121284
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1006,1.2388346639750338
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1007,1.272891130385436
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1008,1.3228025583910437
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1009,1.2262066825360947
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1010,1.2473964514432405
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1011,1.2953339365765641
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1012,1.2776118823942078
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1013,1.2670286242786584
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1014,1.2811927977590276
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1015,1.2479216361589796
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1016,1.3117579728615683
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1017,1.2991923015745679
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1018,1.26254959359959
+Simulation Gene,gene,0.1,WFR coupling + Brownian bridge (log-linear mass),1019,1.2806527459893102
+Simulation Gene,gene,0.25,RUOT,1000,1.9447215571039873
+Simulation Gene,gene,0.25,RUOT,1001,1.9663757034156468
+Simulation Gene,gene,0.25,RUOT,1002,1.9170762644992165
+Simulation Gene,gene,0.25,RUOT,1003,1.8916163358603808
+Simulation Gene,gene,0.25,RUOT,1004,1.9814756966748068
+Simulation Gene,gene,0.25,RUOT,1005,1.913655701688691
+Simulation Gene,gene,0.25,RUOT,1006,1.900489822369173
+Simulation Gene,gene,0.25,RUOT,1007,1.9405731649343918
+Simulation Gene,gene,0.25,RUOT,1008,1.9858034604256851
+Simulation Gene,gene,0.25,RUOT,1009,1.8974936035231567
+Simulation Gene,gene,0.25,RUOT,1010,1.9129333480176458
+Simulation Gene,gene,0.25,RUOT,1011,1.9653017762340816
+Simulation Gene,gene,0.25,RUOT,1012,1.94416374974601
+Simulation Gene,gene,0.25,RUOT,1013,1.9238724774048723
+Simulation Gene,gene,0.25,RUOT,1014,1.9542280099497558
+Simulation Gene,gene,0.25,RUOT,1015,1.9170949901984544
+Simulation Gene,gene,0.25,RUOT,1016,1.9850114079654522
+Simulation Gene,gene,0.25,RUOT,1017,1.9596263104645715
+Simulation Gene,gene,0.25,RUOT,1018,1.9198247603335385
+Simulation Gene,gene,0.25,RUOT,1019,1.9533904769457981
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1000,1.9743575890991178
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1001,1.9927550488425076
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1002,1.940276529102654
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1003,1.916799812494643
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1004,2.006501784581159
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1005,1.9386388293284873
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1006,1.9259397271957943
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1007,1.9661679337447466
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1008,2.008502923814948
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1009,1.9296129048629176
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1010,1.9354727382257053
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1011,1.9945403610747021
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1012,1.9720174440619367
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1013,1.9494952498942886
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1014,1.982261441700294
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1015,1.9446135913104765
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1016,2.0110210858570112
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1017,1.983469658686872
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1018,1.9459955666904887
+Simulation Gene,gene,0.25,WFR+Brownian bridge,1019,1.979312100886613
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1000,1.9964936301052743
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1001,2.0145195802812776
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1002,1.961225415204519
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1003,1.9391169012258511
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1004,2.025958411806256
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1005,1.959847771167492
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1006,1.9469372028860503
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1007,1.9870183674004835
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1008,2.0302637936153696
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1009,1.9534535472836305
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1010,1.9561704697608244
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1011,2.016411978390829
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1012,1.9941543082003754
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1013,1.9711549958391794
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1014,2.0050655395697676
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1015,1.9666075522263469
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1016,2.0328880209490117
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1017,2.0047397287603355
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1018,1.9675473893517155
+Simulation Gene,gene,0.25,WFR coupling + Brownian bridge (log-linear mass),1019,1.9998236713018651
+Simulation Gene,gene,0.5,RUOT,1000,5.820836854787034
+Simulation Gene,gene,0.5,RUOT,1001,5.8062360684152665
+Simulation Gene,gene,0.5,RUOT,1002,5.792452251663207
+Simulation Gene,gene,0.5,RUOT,1003,5.725618047358691
+Simulation Gene,gene,0.5,RUOT,1004,5.917306785177067
+Simulation Gene,gene,0.5,RUOT,1005,5.781166198446405
+Simulation Gene,gene,0.5,RUOT,1006,5.750616399852017
+Simulation Gene,gene,0.5,RUOT,1007,5.838313302077204
+Simulation Gene,gene,0.5,RUOT,1008,5.878172518735236
+Simulation Gene,gene,0.5,RUOT,1009,5.734547669561121
+Simulation Gene,gene,0.5,RUOT,1010,5.788902905213205
+Simulation Gene,gene,0.5,RUOT,1011,5.873766300803988
+Simulation Gene,gene,0.5,RUOT,1012,5.803432671207096
+Simulation Gene,gene,0.5,RUOT,1013,5.789110700141125
+Simulation Gene,gene,0.5,RUOT,1014,5.865927804829269
+Simulation Gene,gene,0.5,RUOT,1015,5.781455380488815
+Simulation Gene,gene,0.5,RUOT,1016,5.912688972933845
+Simulation Gene,gene,0.5,RUOT,1017,5.826749371403134
+Simulation Gene,gene,0.5,RUOT,1018,5.796899326738578
+Simulation Gene,gene,0.5,RUOT,1019,5.8814368071696945
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1000,6.148744100671682
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1001,6.105962485477041
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1002,6.041792671818188
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1003,5.99902039813179
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1004,6.229056039398678
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1005,6.040408218807327
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1006,6.036249859454822
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1007,6.122217723944544
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1008,6.167266889276304
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1009,6.042740956034324
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1010,6.068454991174467
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1011,6.199866883282438
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1012,6.126422777655026
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1013,6.062236625855504
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1014,6.176973628693228
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1015,6.060296503048399
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1016,6.196040492395812
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1017,6.119131938801431
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1018,6.064801954445449
+Simulation Gene,gene,0.5,WFR+Brownian bridge,1019,6.174247330200796
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1000,6.099417450614865
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1001,6.059442763567755
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1002,5.990315531158338
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1003,5.94962138685228
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1004,6.176123018993996
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1005,5.995773129441759
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1006,5.991991406428542
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1007,6.072383632084226
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1008,6.122020205274373
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1009,6.000190390834529
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1010,6.01676711921578
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1011,6.153438519083183
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1012,6.078577161243659
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1013,6.013180563938488
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1014,6.134226165179077
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1015,6.018503103308484
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1016,6.148552866485046
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1017,6.067432868276798
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1018,6.020219789986293
+Simulation Gene,gene,0.5,WFR coupling + Brownian bridge (log-linear mass),1019,6.126290437344073
+Simulation Gene,gene,1.0,RUOT,1000,25.214502010849905
+Simulation Gene,gene,1.0,RUOT,1001,24.932617968202255
+Simulation Gene,gene,1.0,RUOT,1002,25.47999199199507
+Simulation Gene,gene,1.0,RUOT,1003,25.131603067462738
+Simulation Gene,gene,1.0,RUOT,1004,25.615343006722835
+Simulation Gene,gene,1.0,RUOT,1005,25.278874615035992
+Simulation Gene,gene,1.0,RUOT,1006,25.334642836456453
+Simulation Gene,gene,1.0,RUOT,1007,25.31983254016292
+Simulation Gene,gene,1.0,RUOT,1008,25.306083247194344
+Simulation Gene,gene,1.0,RUOT,1009,24.870295752525262
+Simulation Gene,gene,1.0,RUOT,1010,25.33752400479649
+Simulation Gene,gene,1.0,RUOT,1011,25.16281801615098
+Simulation Gene,gene,1.0,RUOT,1012,25.337675822049665
+Simulation Gene,gene,1.0,RUOT,1013,25.188926141245688
+Simulation Gene,gene,1.0,RUOT,1014,25.100287078452084
+Simulation Gene,gene,1.0,RUOT,1015,25.38442239817284
+Simulation Gene,gene,1.0,RUOT,1016,25.295453483391263
+Simulation Gene,gene,1.0,RUOT,1017,25.24049995084391
+Simulation Gene,gene,1.0,RUOT,1018,25.184634434570487
+Simulation Gene,gene,1.0,RUOT,1019,25.26818237917413
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1000,27.18500734906647
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1001,26.93015231341595
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1002,27.411953490711504
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1003,26.86097821990526
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1004,27.659749713707445
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1005,27.158948139596045
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1006,27.07610526549725
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1007,27.357947546658398
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1008,27.627257127959325
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1009,26.870828416822608
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1010,27.185698905645232
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1011,27.33004071020743
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1012,27.432327104616103
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1013,26.965146616724123
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1014,27.40054724969749
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1015,27.549660339039832
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1016,27.62659617958182
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1017,27.382733012661458
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1018,27.122844440331324
+Simulation Gene,gene,1.0,WFR+Brownian bridge,1019,27.67398044964703
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1000,26.53731835540266
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1001,26.256227117310015
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1002,26.711533183106596
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1003,26.191701656529137
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1004,26.92540836404008
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1005,26.518402382857545
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1006,26.378528304773255
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1007,26.66796758768052
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1008,26.97181098036257
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1009,26.29240165478777
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1010,26.626163809812315
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1011,26.732943699557534
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1012,26.842726267466045
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1013,26.311386542227087
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1014,26.81045779891269
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1015,26.860315322176287
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1016,27.07605441901277
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1017,26.711258882895493
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1018,26.450691867238955
+Simulation Gene,gene,1.0,WFR coupling + Brownian bridge (log-linear mass),1019,26.994018005973572
+EMT,emt,0.1,RUOT,1000,0.9351593976366761
+EMT,emt,0.1,RUOT,1001,0.9316930917852781
+EMT,emt,0.1,RUOT,1002,0.9330439215161844
+EMT,emt,0.1,RUOT,1003,0.9338025644123004
+EMT,emt,0.1,RUOT,1004,0.9288050714735445
+EMT,emt,0.1,RUOT,1005,0.9329849679388278
+EMT,emt,0.1,RUOT,1006,0.9356844465085816
+EMT,emt,0.1,RUOT,1007,0.9321455778339625
+EMT,emt,0.1,RUOT,1008,0.9348805079930436
+EMT,emt,0.1,RUOT,1009,0.9317379301087824
+EMT,emt,0.1,RUOT,1010,0.9270050306433835
+EMT,emt,0.1,RUOT,1011,0.9343871287558156
+EMT,emt,0.1,RUOT,1012,0.9361738419354368
+EMT,emt,0.1,RUOT,1013,0.9301153490463836
+EMT,emt,0.1,RUOT,1014,0.9351329032328013
+EMT,emt,0.1,RUOT,1015,0.9348470438726693
+EMT,emt,0.1,RUOT,1016,0.936162890684287
+EMT,emt,0.1,RUOT,1017,0.9337081127103167
+EMT,emt,0.1,RUOT,1018,0.9349549888683429
+EMT,emt,0.1,RUOT,1019,0.9341763068806231
+EMT,emt,0.1,WFR+Brownian bridge,1000,0.9266243934997866
+EMT,emt,0.1,WFR+Brownian bridge,1001,0.9233242686431189
+EMT,emt,0.1,WFR+Brownian bridge,1002,0.9264160486574063
+EMT,emt,0.1,WFR+Brownian bridge,1003,0.9238592403165112
+EMT,emt,0.1,WFR+Brownian bridge,1004,0.9207171329609184
+EMT,emt,0.1,WFR+Brownian bridge,1005,0.9278258092106486
+EMT,emt,0.1,WFR+Brownian bridge,1006,0.9263833603390079
+EMT,emt,0.1,WFR+Brownian bridge,1007,0.9250873199877688
+EMT,emt,0.1,WFR+Brownian bridge,1008,0.9262968606001989
+EMT,emt,0.1,WFR+Brownian bridge,1009,0.9258128909164552
+EMT,emt,0.1,WFR+Brownian bridge,1010,0.9195767999467397
+EMT,emt,0.1,WFR+Brownian bridge,1011,0.9268236903539666
+EMT,emt,0.1,WFR+Brownian bridge,1012,0.9279451403258778
+EMT,emt,0.1,WFR+Brownian bridge,1013,0.9222866727343236
+EMT,emt,0.1,WFR+Brownian bridge,1014,0.9288044000948155
+EMT,emt,0.1,WFR+Brownian bridge,1015,0.929107180371472
+EMT,emt,0.1,WFR+Brownian bridge,1016,0.9308022121924728
+EMT,emt,0.1,WFR+Brownian bridge,1017,0.9240966020927517
+EMT,emt,0.1,WFR+Brownian bridge,1018,0.925701215674507
+EMT,emt,0.1,WFR+Brownian bridge,1019,0.9305443897619652
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1000,0.9449381644254249
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1001,0.9404715026755148
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1002,0.9399119923545188
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1003,0.9427239699238537
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1004,0.9392600142680373
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1005,0.9449964821466208
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1006,0.9442309227969489
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1007,0.9391461717778277
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1008,0.9396168571182089
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1009,0.9432833285988674
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1010,0.9346749870700949
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1011,0.9440124617986161
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1012,0.9455162777260389
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1013,0.9403485235937751
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1014,0.9421334000723873
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1015,0.9457434064490402
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1016,0.945186558783456
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1017,0.9408462598835159
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1018,0.9429593172813651
+EMT,emt,0.1,WFR coupling + Brownian bridge (log-linear mass),1019,0.9415411677214081
+EMT,emt,0.25,RUOT,1000,3.035977017093765
+EMT,emt,0.25,RUOT,1001,3.013063285828112
+EMT,emt,0.25,RUOT,1002,3.01385296816285
+EMT,emt,0.25,RUOT,1003,3.034549324485268
+EMT,emt,0.25,RUOT,1004,3.025468330984223
+EMT,emt,0.25,RUOT,1005,3.048905331910378
+EMT,emt,0.25,RUOT,1006,3.0308430913078404
+EMT,emt,0.25,RUOT,1007,3.041943119635337
+EMT,emt,0.25,RUOT,1008,3.020219364819631
+EMT,emt,0.25,RUOT,1009,3.0400958680449808
+EMT,emt,0.25,RUOT,1010,3.011335543760862
+EMT,emt,0.25,RUOT,1011,3.0342127423835574
+EMT,emt,0.25,RUOT,1012,3.0411501620128654
+EMT,emt,0.25,RUOT,1013,3.0351559298913995
+EMT,emt,0.25,RUOT,1014,3.0344107743710715
+EMT,emt,0.25,RUOT,1015,3.031637389397909
+EMT,emt,0.25,RUOT,1016,3.0349367950138944
+EMT,emt,0.25,RUOT,1017,3.044365747200855
+EMT,emt,0.25,RUOT,1018,3.0337769497412084
+EMT,emt,0.25,RUOT,1019,3.027151796124185
+EMT,emt,0.25,WFR+Brownian bridge,1000,3.2526401624265917
+EMT,emt,0.25,WFR+Brownian bridge,1001,3.2255662570108745
+EMT,emt,0.25,WFR+Brownian bridge,1002,3.2325252383441945
+EMT,emt,0.25,WFR+Brownian bridge,1003,3.2509542992329266
+EMT,emt,0.25,WFR+Brownian bridge,1004,3.2391147081742084
+EMT,emt,0.25,WFR+Brownian bridge,1005,3.267759512958221
+EMT,emt,0.25,WFR+Brownian bridge,1006,3.235632485031201
+EMT,emt,0.25,WFR+Brownian bridge,1007,3.2532025383942753
+EMT,emt,0.25,WFR+Brownian bridge,1008,3.235011436303335
+EMT,emt,0.25,WFR+Brownian bridge,1009,3.2601500614522774
+EMT,emt,0.25,WFR+Brownian bridge,1010,3.221648089915744
+EMT,emt,0.25,WFR+Brownian bridge,1011,3.2493326375476697
+EMT,emt,0.25,WFR+Brownian bridge,1012,3.2577536994953706
+EMT,emt,0.25,WFR+Brownian bridge,1013,3.2419139021568
+EMT,emt,0.25,WFR+Brownian bridge,1014,3.2550860878978454
+EMT,emt,0.25,WFR+Brownian bridge,1015,3.243777850932315
+EMT,emt,0.25,WFR+Brownian bridge,1016,3.2540772330890824
+EMT,emt,0.25,WFR+Brownian bridge,1017,3.262443222582057
+EMT,emt,0.25,WFR+Brownian bridge,1018,3.252937789227603
+EMT,emt,0.25,WFR+Brownian bridge,1019,3.248193655956972
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1000,3.151220867918809
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1001,3.1238744205076716
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1002,3.1357804178369206
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1003,3.1573956972793393
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1004,3.13856450204299
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1005,3.1735562538530635
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1006,3.150556546674929
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1007,3.152811004240928
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1008,3.1368010456759223
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1009,3.164475090151465
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1010,3.1187319583159154
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1011,3.155410568894836
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1012,3.1590918361155262
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1013,3.147408271512245
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1014,3.1597402927310063
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1015,3.1501832284329367
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1016,3.157663315452061
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1017,3.1679343152872907
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1018,3.157900042595605
+EMT,emt,0.25,WFR coupling + Brownian bridge (log-linear mass),1019,3.149303592307637
+EMT,emt,0.5,RUOT,1000,12.17443807933424
+EMT,emt,0.5,RUOT,1001,12.125805283712868
+EMT,emt,0.5,RUOT,1002,12.124726185737865
+EMT,emt,0.5,RUOT,1003,12.211635259716422
+EMT,emt,0.5,RUOT,1004,12.190437349476333
+EMT,emt,0.5,RUOT,1005,12.248161171922934
+EMT,emt,0.5,RUOT,1006,12.204589600044038
+EMT,emt,0.5,RUOT,1007,12.18539137169783
+EMT,emt,0.5,RUOT,1008,12.143743475286026
+EMT,emt,0.5,RUOT,1009,12.228788403436916
+EMT,emt,0.5,RUOT,1010,12.145619149465137
+EMT,emt,0.5,RUOT,1011,12.155793086312114
+EMT,emt,0.5,RUOT,1012,12.218602898174503
+EMT,emt,0.5,RUOT,1013,12.237156996042946
+EMT,emt,0.5,RUOT,1014,12.193463127454553
+EMT,emt,0.5,RUOT,1015,12.15659688229093
+EMT,emt,0.5,RUOT,1016,12.181305176547315
+EMT,emt,0.5,RUOT,1017,12.173389887515496
+EMT,emt,0.5,RUOT,1018,12.171923154169203
+EMT,emt,0.5,RUOT,1019,12.169845260716869
+EMT,emt,0.5,WFR+Brownian bridge,1000,13.013790747970734
+EMT,emt,0.5,WFR+Brownian bridge,1001,12.892858986690573
+EMT,emt,0.5,WFR+Brownian bridge,1002,12.906930620744788
+EMT,emt,0.5,WFR+Brownian bridge,1003,13.018865232689917
+EMT,emt,0.5,WFR+Brownian bridge,1004,12.96926158172251
+EMT,emt,0.5,WFR+Brownian bridge,1005,13.094063752251044
+EMT,emt,0.5,WFR+Brownian bridge,1006,13.019851761576462
+EMT,emt,0.5,WFR+Brownian bridge,1007,13.030676097372362
+EMT,emt,0.5,WFR+Brownian bridge,1008,12.969291072541132
+EMT,emt,0.5,WFR+Brownian bridge,1009,13.042500750485726
+EMT,emt,0.5,WFR+Brownian bridge,1010,12.901574825692071
+EMT,emt,0.5,WFR+Brownian bridge,1011,12.98534443708668
+EMT,emt,0.5,WFR+Brownian bridge,1012,13.0662910612105
+EMT,emt,0.5,WFR+Brownian bridge,1013,13.055826185823886
+EMT,emt,0.5,WFR+Brownian bridge,1014,13.033594845958325
+EMT,emt,0.5,WFR+Brownian bridge,1015,12.998506561177715
+EMT,emt,0.5,WFR+Brownian bridge,1016,13.034564662848037
+EMT,emt,0.5,WFR+Brownian bridge,1017,13.058383961107525
+EMT,emt,0.5,WFR+Brownian bridge,1018,13.023876469802143
+EMT,emt,0.5,WFR+Brownian bridge,1019,12.982255752596991
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1000,13.028396143044672
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1001,12.92136602437463
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1002,12.929062549369897
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1003,13.039187913781078
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1004,12.99583794745341
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1005,13.11286190935318
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1006,13.047240315899112
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1007,13.055567106064546
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1008,12.992152901706557
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1009,13.073261085453478
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1010,12.931387334296726
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1011,13.013269891007582
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1012,13.094408287827282
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1013,13.07928832056725
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1014,13.056319741041476
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1015,13.032703373932103
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1016,13.051088951807824
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1017,13.077853912232491
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1018,13.048091478055264
+EMT,emt,0.5,WFR coupling + Brownian bridge (log-linear mass),1019,13.011160420074471
+EMT,emt,1.0,RUOT,1000,60.6113787517403
+EMT,emt,1.0,RUOT,1001,60.81478991491707
+EMT,emt,1.0,RUOT,1002,61.1181726373059
+EMT,emt,1.0,RUOT,1003,61.263969229810506
+EMT,emt,1.0,RUOT,1004,61.63470840319123
+EMT,emt,1.0,RUOT,1005,60.790495680582396
+EMT,emt,1.0,RUOT,1006,60.95272666589154
+EMT,emt,1.0,RUOT,1007,60.50634544560196
+EMT,emt,1.0,RUOT,1008,60.3962927028651
+EMT,emt,1.0,RUOT,1009,61.0517638213799
+EMT,emt,1.0,RUOT,1010,61.82101981460005
+EMT,emt,1.0,RUOT,1011,60.546100729853066
+EMT,emt,1.0,RUOT,1012,60.69231189207583
+EMT,emt,1.0,RUOT,1013,60.940468538760435
+EMT,emt,1.0,RUOT,1014,60.59001898486122
+EMT,emt,1.0,RUOT,1015,60.24146813046396
+EMT,emt,1.0,RUOT,1016,60.55238692729439
+EMT,emt,1.0,RUOT,1017,59.90010016602176
+EMT,emt,1.0,RUOT,1018,60.355423984271575
+EMT,emt,1.0,RUOT,1019,60.791578378560715
+EMT,emt,1.0,WFR+Brownian bridge,1000,68.71313766648267
+EMT,emt,1.0,WFR+Brownian bridge,1001,68.20489861035327
+EMT,emt,1.0,WFR+Brownian bridge,1002,68.25561064535302
+EMT,emt,1.0,WFR+Brownian bridge,1003,68.78279312317801
+EMT,emt,1.0,WFR+Brownian bridge,1004,68.63848592738601
+EMT,emt,1.0,WFR+Brownian bridge,1005,69.13606877125466
+EMT,emt,1.0,WFR+Brownian bridge,1006,68.84678150934677
+EMT,emt,1.0,WFR+Brownian bridge,1007,68.85305205733934
+EMT,emt,1.0,WFR+Brownian bridge,1008,68.49361175591928
+EMT,emt,1.0,WFR+Brownian bridge,1009,68.93642744530436
+EMT,emt,1.0,WFR+Brownian bridge,1010,68.35689913391533
+EMT,emt,1.0,WFR+Brownian bridge,1011,68.59298431291965
+EMT,emt,1.0,WFR+Brownian bridge,1012,69.04152388241314
+EMT,emt,1.0,WFR+Brownian bridge,1013,68.92598539337185
+EMT,emt,1.0,WFR+Brownian bridge,1014,68.85316377817895
+EMT,emt,1.0,WFR+Brownian bridge,1015,68.7304191251681
+EMT,emt,1.0,WFR+Brownian bridge,1016,68.7866786326489
+EMT,emt,1.0,WFR+Brownian bridge,1017,68.93708701879746
+EMT,emt,1.0,WFR+Brownian bridge,1018,68.7596305833288
+EMT,emt,1.0,WFR+Brownian bridge,1019,68.69311337224053
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1000,68.38843044939613
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1001,67.88719571457887
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1002,67.93578005786371
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1003,68.47726820726884
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1004,68.3206512761651
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1005,68.82016064201679
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1006,68.5293603310361
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1007,68.5441663263007
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1008,68.19174899397356
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1009,68.61902003221007
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1010,68.03821896899902
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1011,68.28998845960463
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1012,68.72159626406453
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1013,68.61215598283731
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1014,68.54420494951992
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1015,68.4187032270916
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1016,68.47495361768634
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1017,68.62916585181738
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1018,68.44979430690731
+EMT,emt,1.0,WFR coupling + Brownian bridge (log-linear mass),1019,68.37716455431239
+WFR-FM Dygen,dygen,0.1,RUOT,1000,6.266050735732588
+WFR-FM Dygen,dygen,0.1,RUOT,1001,6.49713018116331
+WFR-FM Dygen,dygen,0.1,RUOT,1002,6.389074517041321
+WFR-FM Dygen,dygen,0.1,RUOT,1003,6.406809411703467
+WFR-FM Dygen,dygen,0.1,RUOT,1004,6.613077734545067
+WFR-FM Dygen,dygen,0.1,RUOT,1005,6.596628912925228
+WFR-FM Dygen,dygen,0.1,RUOT,1006,6.809755659343532
+WFR-FM Dygen,dygen,0.1,RUOT,1007,6.694475327498996
+WFR-FM Dygen,dygen,0.1,RUOT,1008,6.725697308048903
+WFR-FM Dygen,dygen,0.1,RUOT,1009,6.285766275334784
+WFR-FM Dygen,dygen,0.1,RUOT,1010,6.431874559365424
+WFR-FM Dygen,dygen,0.1,RUOT,1011,6.504319665038745
+WFR-FM Dygen,dygen,0.1,RUOT,1012,6.463028227355462
+WFR-FM Dygen,dygen,0.1,RUOT,1013,6.398097918705478
+WFR-FM Dygen,dygen,0.1,RUOT,1014,6.530378068252094
+WFR-FM Dygen,dygen,0.1,RUOT,1015,6.688295928184643
+WFR-FM Dygen,dygen,0.1,RUOT,1016,6.865405724109602
+WFR-FM Dygen,dygen,0.1,RUOT,1017,6.799467385373756
+WFR-FM Dygen,dygen,0.1,RUOT,1018,6.285654482764648
+WFR-FM Dygen,dygen,0.1,RUOT,1019,6.420152823479852
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1000,6.309632965241002
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1001,6.572293344144887
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1002,6.456777690192059
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1003,6.485406810649646
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1004,6.8287878882068345
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1005,6.780702056532156
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1006,6.901950867534298
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1007,6.75710881524489
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1008,6.830197340277953
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1009,6.341613475101035
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1010,6.515903036033385
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1011,6.585149365020381
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1012,6.601292667574416
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1013,6.485106403323902
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1014,6.560276048639812
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1015,6.716769860250328
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1016,6.944821691012155
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1017,6.953536561281119
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1018,6.341013460685756
+WFR-FM Dygen,dygen,0.1,WFR+Brownian bridge,1019,6.439761613286915
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1000,6.7791738306752105
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1001,7.037222794824014
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1002,6.954524776787531
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1003,6.99310678287977
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1004,7.187056304484766
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1005,7.235927705346611
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1006,7.477349434732401
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1007,7.323501088225233
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1008,7.312389107406858
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1009,6.8632715539201214
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1010,7.06904052434409
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1011,7.129425793285865
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1012,6.991926604057337
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1013,6.980481975761116
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1014,7.077684652521963
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1015,7.227006236439594
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1016,7.403401334788365
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1017,7.468357325174594
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1018,6.779003468512141
+WFR-FM Dygen,dygen,0.1,WFR coupling + Brownian bridge (log-linear mass),1019,6.966668898737039
+WFR-FM Dygen,dygen,0.25,RUOT,1000,7.599299553205025
+WFR-FM Dygen,dygen,0.25,RUOT,1001,7.730645811587538
+WFR-FM Dygen,dygen,0.25,RUOT,1002,7.729354615689906
+WFR-FM Dygen,dygen,0.25,RUOT,1003,7.603964974063805
+WFR-FM Dygen,dygen,0.25,RUOT,1004,8.006224234197774
+WFR-FM Dygen,dygen,0.25,RUOT,1005,8.054968930446616
+WFR-FM Dygen,dygen,0.25,RUOT,1006,8.322911886523462
+WFR-FM Dygen,dygen,0.25,RUOT,1007,8.017541631432902
+WFR-FM Dygen,dygen,0.25,RUOT,1008,7.976844644771578
+WFR-FM Dygen,dygen,0.25,RUOT,1009,7.575724909992996
+WFR-FM Dygen,dygen,0.25,RUOT,1010,7.776795257899801
+WFR-FM Dygen,dygen,0.25,RUOT,1011,7.8497752897031745
+WFR-FM Dygen,dygen,0.25,RUOT,1012,7.9467769921052245
+WFR-FM Dygen,dygen,0.25,RUOT,1013,7.81033782162557
+WFR-FM Dygen,dygen,0.25,RUOT,1014,7.79306635702
+WFR-FM Dygen,dygen,0.25,RUOT,1015,7.924844888935342
+WFR-FM Dygen,dygen,0.25,RUOT,1016,8.492374648998457
+WFR-FM Dygen,dygen,0.25,RUOT,1017,8.090851080493671
+WFR-FM Dygen,dygen,0.25,RUOT,1018,7.851158799541978
+WFR-FM Dygen,dygen,0.25,RUOT,1019,7.968167682036464
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1000,7.641606727624261
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1001,7.824503265262022
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1002,7.8231970522883785
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1003,7.808049540709206
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1004,8.141260103959006
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1005,8.170518087220604
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1006,8.46516927912862
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1007,8.136737692689307
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1008,8.139101214258337
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1009,7.7139137383523755
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1010,7.8948933234074135
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1011,7.933747323094288
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1012,8.091568271739842
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1013,7.908746138086243
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1014,7.930673699307643
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1015,8.16851439993789
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1016,8.52369790931954
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1017,8.319454055719763
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1018,8.005584149449831
+WFR-FM Dygen,dygen,0.25,WFR+Brownian bridge,1019,8.083609404565893
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1000,8.149818412144972
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1001,8.199647684831174
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1002,8.26757711746706
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1003,8.186517330486785
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1004,8.626522125237454
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1005,8.654929651866919
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1006,8.92821523268557
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1007,8.608567236117288
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1008,8.597816062667256
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1009,8.17493142804077
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1010,8.319991580742956
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1011,8.408422608435494
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1012,8.505603839712094
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1013,8.411886694171132
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1014,8.414158494559576
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1015,8.537130445559065
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1016,8.89827582443734
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1017,8.744004631048135
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1018,8.423244527181225
+WFR-FM Dygen,dygen,0.25,WFR coupling + Brownian bridge (log-linear mass),1019,8.59485297562446
+WFR-FM Dygen,dygen,0.5,RUOT,1000,12.70738861574192
+WFR-FM Dygen,dygen,0.5,RUOT,1001,13.031083800444184
+WFR-FM Dygen,dygen,0.5,RUOT,1002,13.2861413027179
+WFR-FM Dygen,dygen,0.5,RUOT,1003,13.081715742219679
+WFR-FM Dygen,dygen,0.5,RUOT,1004,13.308001194074512
+WFR-FM Dygen,dygen,0.5,RUOT,1005,13.26186157326037
+WFR-FM Dygen,dygen,0.5,RUOT,1006,13.791165484110165
+WFR-FM Dygen,dygen,0.5,RUOT,1007,13.408117239269972
+WFR-FM Dygen,dygen,0.5,RUOT,1008,13.284114207379275
+WFR-FM Dygen,dygen,0.5,RUOT,1009,12.816789702320818
+WFR-FM Dygen,dygen,0.5,RUOT,1010,13.047570925012646
+WFR-FM Dygen,dygen,0.5,RUOT,1011,13.007140959328815
+WFR-FM Dygen,dygen,0.5,RUOT,1012,13.578335021001513
+WFR-FM Dygen,dygen,0.5,RUOT,1013,13.306929352032899
+WFR-FM Dygen,dygen,0.5,RUOT,1014,13.2007397897905
+WFR-FM Dygen,dygen,0.5,RUOT,1015,13.32436231596671
+WFR-FM Dygen,dygen,0.5,RUOT,1016,14.063168958373142
+WFR-FM Dygen,dygen,0.5,RUOT,1017,13.364347033602463
+WFR-FM Dygen,dygen,0.5,RUOT,1018,13.086933289447622
+WFR-FM Dygen,dygen,0.5,RUOT,1019,13.713886758210784
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1000,13.394373355511274
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1001,13.597652509073239
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1002,14.035920539401689
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1003,13.813910103154363
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1004,14.037842598937948
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1005,14.079269167906945
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1006,14.624312552167922
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1007,14.164490713247778
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1008,13.98660434444229
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1009,13.55997974543968
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1010,13.733707391265817
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1011,13.715911788837964
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1012,14.229324169724979
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1013,14.056675336680497
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1014,13.897387780169502
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1015,14.192544627874291
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1016,14.695064748315362
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1017,14.304490052622326
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1018,13.934397088066449
+WFR-FM Dygen,dygen,0.5,WFR+Brownian bridge,1019,14.431913778637906
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1000,13.678667379342794
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1001,13.872413643346546
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1002,14.266946247158671
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1003,13.963835011080057
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1004,14.2641780518898
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1005,14.348636332723931
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1006,14.823759085015816
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1007,14.377246570508902
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1008,14.199344006737778
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1009,13.882603207348176
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1010,13.975908067742282
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1011,13.896048436931387
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1012,14.498379695774691
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1013,14.334224154680168
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1014,14.174308462689606
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1015,14.369807228080637
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1016,14.87337503190956
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1017,14.420699445508442
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1018,14.160040029078052
+WFR-FM Dygen,dygen,0.5,WFR coupling + Brownian bridge (log-linear mass),1019,14.647064664917497
+WFR-FM Dygen,dygen,1.0,RUOT,1000,35.644403639573476
+WFR-FM Dygen,dygen,1.0,RUOT,1001,36.40601675000819
+WFR-FM Dygen,dygen,1.0,RUOT,1002,37.002807793577716
+WFR-FM Dygen,dygen,1.0,RUOT,1003,36.42621152067596
+WFR-FM Dygen,dygen,1.0,RUOT,1004,36.97695888660925
+WFR-FM Dygen,dygen,1.0,RUOT,1005,37.488033290111204
+WFR-FM Dygen,dygen,1.0,RUOT,1006,37.92933130613582
+WFR-FM Dygen,dygen,1.0,RUOT,1007,36.819697746692995
+WFR-FM Dygen,dygen,1.0,RUOT,1008,36.92423078060028
+WFR-FM Dygen,dygen,1.0,RUOT,1009,36.58129552132661
+WFR-FM Dygen,dygen,1.0,RUOT,1010,36.31438073157069
+WFR-FM Dygen,dygen,1.0,RUOT,1011,36.45091048092921
+WFR-FM Dygen,dygen,1.0,RUOT,1012,38.12335215887755
+WFR-FM Dygen,dygen,1.0,RUOT,1013,37.057041766148565
+WFR-FM Dygen,dygen,1.0,RUOT,1014,37.109441522054716
+WFR-FM Dygen,dygen,1.0,RUOT,1015,36.80358088209443
+WFR-FM Dygen,dygen,1.0,RUOT,1016,37.975552193477576
+WFR-FM Dygen,dygen,1.0,RUOT,1017,36.99282286479571
+WFR-FM Dygen,dygen,1.0,RUOT,1018,36.63214779958867
+WFR-FM Dygen,dygen,1.0,RUOT,1019,37.94875490549424
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1000,41.31697646208317
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1001,41.79868775323029
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1002,42.64929636930451
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1003,42.375044463081956
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1004,42.2325109643485
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1005,42.628037719534674
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1006,43.19562943714656
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1007,42.60651052010922
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1008,42.33072553988257
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1009,42.04683684523098
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1010,42.222335504227495
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1011,41.95148875823161
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1012,43.163520097649176
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1013,42.77700164788388
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1014,42.90371689982371
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1015,43.07337263202004
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1016,43.28832124493434
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1017,42.83379904372399
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1018,42.14572886790827
+WFR-FM Dygen,dygen,1.0,WFR+Brownian bridge,1019,43.42211801189446
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1000,40.2711199007564
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1001,40.721360251801194
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1002,41.39993697845363
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1003,41.193734532073044
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1004,41.124797585621096
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1005,41.39640434268698
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1006,41.892446468769826
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1007,41.36000972362206
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1008,41.124247674153565
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1009,40.91060059609136
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1010,41.036931403644815
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1011,40.75121345387398
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1012,41.732496629253
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1013,41.58059070722185
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1014,41.59328795876144
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1015,41.667951911756255
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1016,41.916112735442844
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1017,41.51176286019706
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1018,41.06327428252046
+WFR-FM Dygen,dygen,1.0,WFR coupling + Brownian bridge (log-linear mass),1019,42.01025480937926

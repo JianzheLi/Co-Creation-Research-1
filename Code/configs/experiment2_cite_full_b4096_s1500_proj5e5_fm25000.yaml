@@ -1,0 +1,5 @@
+# Full Experiment 2 Cite run from scratch with the previously used projection tolerance.
+# The partial 1e-5 run is kept separately for comparison.
+extends: experiment2_cite_full_b4096_s1500_proj1e5_fm25000.yaml
+coupling:
+  projection_tolerance: 0.00005

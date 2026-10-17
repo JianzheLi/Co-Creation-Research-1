@@ -1,0 +1,4 @@
+extends: gene_wfr_bridge.yaml
+comparison_run: ../Results/gene_steps_gpu_tanh_matching_seed42
+matching:
+  feedback_activation: tanh

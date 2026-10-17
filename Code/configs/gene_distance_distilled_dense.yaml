@@ -1,0 +1,9 @@
+extends: gene_distance_distilled_strict.yaml
+coupling:
+  root_method: bisection
+distillation:
+  sampling: grid
+  distance_grid_nodes: 513
+  ratio_grid_nodes: 1025
+  boundary_samples_per_batch: 768
+  max_error_weight: 1.0

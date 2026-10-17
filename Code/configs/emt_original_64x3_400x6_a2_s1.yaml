@@ -1,0 +1,13 @@
+extends: emt_distance_hermite_primal.yaml
+device: cuda
+growth_penalty: 2.0
+model_sigma: 1.0
+pair:
+  hidden_width: 64
+  hidden_layers: 3
+  training_steps: 3000
+matching:
+  hidden_width: 400
+  hidden_layers: 6
+  feedback_activation: silu
+  last_hidden_activation: tanh

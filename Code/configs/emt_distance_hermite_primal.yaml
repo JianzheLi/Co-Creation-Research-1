@@ -1,0 +1,13 @@
+extends: gene_distance_hermite_primal.yaml
+dataset: official_deepruot_emt
+data_path: data/emt.csv
+data_url: https://raw.githubusercontent.com/zhenyiizhang/DeepRUOT/main/data/emt.csv
+data_sha256: 820eca0ca6a9b8c5aba970dda04052b2e2ea4489b712b948559fe5cd185a8294
+dimension: 10
+model_times: [0, 1, 2, 3]
+growth_penalty: 10.0
+pair:
+  training_mode: steps
+  training_steps: 3000
+coupling:
+  mode: full

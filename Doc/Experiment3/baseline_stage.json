@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "methods": [
+    "wfr_fm",
+    "ot_cfm",
+    "usb",
+    "s2fm",
+    "vgfm",
+    "wl_mechanics"
+  ],
+  "completed_runs": 36,
+  "summary_csv": "../../Results/experiment3/baseline_holdout_w1.csv",
+  "seconds": 12572.3371949,
+  "skipped_method": "VarRUOT (as previously requested)"
+}

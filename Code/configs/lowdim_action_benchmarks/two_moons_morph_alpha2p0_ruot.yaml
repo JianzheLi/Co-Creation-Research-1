@@ -1,0 +1,30 @@
+extends: ../gene_distance_hermite_primal.yaml
+dataset: lowdim_two_moons_morph
+data_path: data/lowdim_action_benchmarks/two_moons_morph.csv
+dimension: 2
+model_times:
+- 0
+- 1
+- 2
+- 3
+model_sigma: 0.25
+growth_penalty: 2.0
+seed: 42
+max_observed_points: null
+pair:
+  training_mode: steps
+  training_steps: 6000
+  times_per_condition: 8
+  conditions_per_batch: 2048
+  checkpoint_every_steps: 500
+  log_every_steps: 100
+  validation_every_steps: 0
+coupling:
+  mode: full
+  marginal_tolerance: 0.002
+  target_relative_tv: 0.001
+  stationarity_tolerance: 0.001
+matching:
+  steps: 30000
+  validation_every: 0
+  feedback_activation: tanh

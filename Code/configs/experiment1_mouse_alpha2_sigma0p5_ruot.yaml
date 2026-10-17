@@ -1,0 +1,24 @@
+extends: mouse_distance_hermite_primal.yaml
+device: cuda
+seed: 42
+growth_penalty: 2.0
+model_sigma: 0.5
+pair:
+  hidden_width: 64
+  hidden_layers: 3
+  training_mode: steps
+  training_steps: 3000
+  cost_objective: renormalized_surrogate
+matching:
+  hidden_width: 400
+  hidden_layers: 6
+  feedback_activation: silu
+  last_hidden_activation: tanh
+  steps: 30000
+  batch_size: 2048
+coupling:
+  partition_seed: 43
+  partition_order: dataset_default
+  stationarity_tolerance: 0.001
+  mode: minibatch
+  minibatch_blocks: 4

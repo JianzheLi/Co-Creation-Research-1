@@ -1,0 +1,8 @@
+# Experiment 2 only: allow a bounded, meaningful uphill step after strict
+# line search fails; retain at most four concurrent Coupling blocks.
+extends: experiment2_cite_parallel3_tol3e3_proj5e5.yaml
+coupling:
+  parallel_workers: 4
+  global_block_queue: true
+  allow_nonmonotone_fallback: true
+  nonmonotone_min_step_fraction: 0.000244140625  # 2^-12 of this iteration's initial trial step

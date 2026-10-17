@@ -1,0 +1,6 @@
+# Matching-only trial using the saved sigma=0.5 path and coupling.
+# Each of V, score, and growth gets its own deeper 8x339 MLP.
+extends: experiment2_eb_noscale_ours_sigma05.yaml
+matching:
+  hidden_width: 339
+  hidden_layers: 8

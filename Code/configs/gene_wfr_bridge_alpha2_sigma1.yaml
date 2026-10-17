@@ -1,0 +1,4 @@
+extends: gene_wfr_bridge_alpha2.yaml
+model_sigma: 1.0
+growth_penalty: 2.0
+comparison_run: ../Results/gene_distance_hermite_primal_alpha2_sigma1_seed42

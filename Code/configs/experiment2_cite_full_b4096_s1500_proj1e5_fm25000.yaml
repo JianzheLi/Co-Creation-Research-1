@@ -1,0 +1,10 @@
+# Full Experiment 2 Cite run from scratch.
+# Pretraining uses the measured faster batch-size/step-count pairing;
+# Coupling keeps the 1e-5 projection tolerance and bounded line-search fallback.
+extends: experiment2_cite_proj1e5_parallel4_nonmonotone.yaml
+pair:
+  conditions_per_batch: 4096
+  training_steps: 1500
+  checkpoint_every_steps: 500
+matching:
+  steps: 25000

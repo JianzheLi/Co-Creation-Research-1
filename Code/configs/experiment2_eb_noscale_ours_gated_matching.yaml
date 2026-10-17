@@ -1,0 +1,6 @@
+# Matching-only trial: independent highway-gated MLPs on the saved path/couplings.
+extends: experiment2_eb_noscale_ours_sigma05.yaml
+matching:
+  hidden_width: 300
+  hidden_layers: 6
+  network_variant: gated

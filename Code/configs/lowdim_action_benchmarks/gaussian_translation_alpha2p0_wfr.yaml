@@ -1,0 +1,31 @@
+extends: ../gene_wfr_bridge_tanh_matching.yaml
+dataset: lowdim_gaussian_translation
+data_path: data/lowdim_action_benchmarks/gaussian_translation.csv
+dimension: 2
+model_times:
+- 0
+- 1
+- 2
+- 3
+model_sigma: 0.25
+growth_penalty: 2.0
+seed: 42
+max_observed_points: null
+pair:
+  training_mode: analytic_wfr_bridge
+  training_steps: 0
+  times_per_condition: 8
+  conditions_per_batch: 2048
+  checkpoint_every_steps: 500
+  log_every_steps: 100
+  validation_every_steps: 0
+coupling:
+  mode: full
+  marginal_tolerance: 0.002
+  target_relative_tv: 0.001
+  stationarity_tolerance: 0.001
+matching:
+  steps: 30000
+  validation_every: 0
+  feedback_activation: tanh
+comparison_run: ../Results/lowdim_action_benchmarks/gaussian_translation_alpha2p0/ruot
