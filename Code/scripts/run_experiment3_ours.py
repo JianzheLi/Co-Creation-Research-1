@@ -56,8 +56,11 @@ def _write_config(dataset: str, holdout: int, train_csv: Path, train_times: int,
                   run_dir: Path, config_dir: Path, *, feedback_activation: str | None = None,
                   network_variant: str | None = None,
                   gradient_clip_norm: float | None = None,
-                  lr_schedule: str | None = None) -> Path:
-    config = yaml.safe_load(CONFIGS[dataset].read_text(encoding="utf-8"))
+                  lr_schedule: str | None = None,
+                  base_config: Path | None = None) -> Path:
+    config = yaml.safe_load((base_config or CONFIGS[dataset]).read_text(encoding="utf-8"))
+    if config["dataset"] != dataset:
+        raise ValueError("The base configuration must match the requested dataset")
     config["data_path"] = str(train_csv.resolve())
     config["model_times"] = list(range(train_times))
     config["seed"] = 42
@@ -135,6 +138,8 @@ def _predict(config_file: Path, run_dir: Path, holdout: int, query_time: float,
     prediction = generated["capture_positions"][0]
     logw = generated["capture_log_weights"][0]
     normalized_weights = np.exp(logw - logsumexp(logw))
+    predicted_mass_ratio = float(np.exp(logsumexp(logw)))
+    observed_mass_ratio = len(truth) / len(first)
     w1 = _full_w1(prediction, truth, normalized_weights)
     output_dir.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(
@@ -156,6 +161,8 @@ def _predict(config_file: Path, run_dir: Path, holdout: int, query_time: float,
         "gradient_clip_norm": config["matching"].get("gradient_clip_norm", 10.0),
         "lr_schedule": config["matching"].get("lr_schedule", "constant"),
         "matching_steps": config["matching"]["steps"],
+        "learning_rate": config["matching"]["learning_rate"],
+        "coupling_blocks": config["coupling"]["minibatch_blocks"],
         "growth_loss_multiplier": config["matching"].get("growth_loss_multiplier", 1.0),
         "model_sigma": config["model_sigma"], "growth_penalty": config["growth_penalty"],
         "pair_path_status": status.get("pair", {}).get("status"),
@@ -164,6 +171,9 @@ def _predict(config_file: Path, run_dir: Path, holdout: int, query_time: float,
         "sde_max_abs_position": float(np.max(np.abs(prediction))),
         "sde_max_abs_log_weight": float(np.max(np.abs(logw))),
         "sde_ess": float(1.0 / np.square(normalized_weights).sum()),
+        "predicted_mass_ratio": predicted_mass_ratio,
+        "observed_mass_ratio": observed_mass_ratio,
+        "mass_relative_error": abs(predicted_mass_ratio - observed_mass_ratio) / observed_mass_ratio,
         "prediction_seconds": time.perf_counter() - started,
         "run_dir": str(run_dir),
     }
@@ -183,6 +193,8 @@ def main():
     parser.add_argument("--network-variant", choices=("plain_output_norm", "plain_output_affine_norm"))
     parser.add_argument("--gradient-clip-norm", type=float)
     parser.add_argument("--lr-schedule", choices=("constant", "cosine", "cosine_2cycle", "cosine_2cycle_half"))
+    parser.add_argument("--base-config", type=Path,
+                        help="Use a selected recipe; each holdout still retrains all three stages")
     args = parser.parse_args()
     root = args.output_root.resolve()
     root.mkdir(parents=True, exist_ok=True)
@@ -221,6 +233,7 @@ def main():
                 network_variant=args.network_variant,
                 gradient_clip_norm=args.gradient_clip_norm,
                 lr_schedule=args.lr_schedule,
+                base_config=args.base_config,
             )
             print(json.dumps({
                 "status": "starting", "dataset": dataset, "heldout_index": holdout,

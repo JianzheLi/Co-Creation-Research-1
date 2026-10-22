@@ -1,0 +1,129 @@
+seed: 42
+device: cuda
+cpu_threads: 4
+dataset: eb_noscale
+data_path: data/eb_noscale.csv
+dimension: 100
+model_times:
+- 0
+- 1
+- 2
+- 3
+- 4
+model_sigma: 0.5
+growth_penalty: 1225.0
+growth_penalty_type: quadratic_half
+control_mode: quadratic_minimal
+max_observed_points: null
+pair:
+  ratio_min: 0.1
+  ratio_max: 10.0
+  coverage_epochs: 10
+  conditions_per_batch: 4096
+  times_per_condition: 8
+  hidden_width: 64
+  hidden_layers: 3
+  correction_bounds:
+  - 4.0
+  - 4.0
+  - 4.0
+  delta_scale: 20.019334474746877
+  learning_rate: 0.001
+  dtype: float64
+  quadrature_nodes: 32
+  max_quadrature_nodes: 128
+  query_atol: 0.0001
+  query_rtol: 0.0001
+  validation_conditions: 128
+  validation_every: 1
+  training_mode: steps
+  training_steps: 1500
+  ratio_sampling: uniform
+  checkpoint_every_steps: 500
+  log_every_steps: 100
+  validation_every_steps: 500
+  parameterization: axial_distance
+  cost_objective: renormalized_surrogate
+coupling:
+  algorithm: projected_mirror_descent
+  entropy_coefficient: sigma_squared
+  reference_weights: ones
+  marginal_tolerance: 0.002
+  root_logmass_tolerance: 1.0e-08
+  max_outer_iterations: 10000
+  max_bisection_iterations: 60
+  mode: minibatch
+  minibatch_size_hint: 64
+  partition_seed: 43
+  ratio_grid_nodes: 257
+  max_ratio_grid_nodes: 1025
+  table_atol: 0.003
+  table_rtol: 0.001
+  curvature_tolerance: 1.0e-05
+  condition_chunk: 4096
+  backend: torch
+  marginal_tolerance_type: relative_l1
+  target_relative_tv: 0.001
+  root_method: null
+  stationarity_tolerance: 0.003
+  cost_evaluation: shared_distance_hermite
+  distance_grid_nodes: 513
+  max_distance_grid_nodes: 2049
+  minibatch_blocks: 2
+  partition_order: dataset_default
+  projection_tolerance: 5.0e-05
+  parallel_workers: 2
+  global_block_queue: true
+  allow_nonmonotone_fallback: true
+  nonmonotone_min_step_fraction: 0.000244140625
+matching:
+  hidden_width: 512
+  hidden_layers: 8
+  batch_size: 2048
+  learning_rate: 0.001
+  steps: 60000
+  dtype: float32
+  interval_sampling: uniform
+  log_every: 100
+  lr_schedule: cosine
+  min_learning_rate: 1.0e-05
+  validation_every: 0
+  feedback_activation: silu
+  last_hidden_activation: silu
+  field_parameterization: endpoint_regularized
+  absorb_sigma_in_singular_velocity: true
+  loss_weighting: endpoint_explicit_sigma
+  independent_velocity_networks: true
+  network_variant: plain_output_norm
+  growth_loss_multiplier: 2.0
+  growth_network_variant: plain_output_norm
+  score_network_variant: plain_output_norm
+generation:
+  n_particles: 2000
+  steps_per_unit_interval: 200
+  endpoint_guard: 1.0e-05
+  particle_birth_death: false
+  carry_log_weights: true
+  sensitivity_particles: 256
+evaluation:
+  library: POT
+  transport_solver: emd2
+  normalize_for_W1_W2: true
+  report_mass_separately: true
+distillation:
+  enabled: false
+  distance_grid_nodes: 513
+  ratio_grid_nodes: 1025
+  hidden_width: 128
+  hidden_layers: 3
+  training_steps: 20000
+  batch_size: 4096
+  learning_rate: 0.001
+  min_learning_rate: 1.0e-06
+  validation_samples: 2048
+  query_atol: 0.001
+  query_rtol: 0.001
+  loss_reduction: mean_plus_max
+  sampling: grid
+  boundary_samples_per_batch: 768
+  max_error_weight: 1.0
